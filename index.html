@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <title>writer</title>
+</head>
+<body>
+  <div class="text"></div>
+  
+
+
+  <script>
+    let textDiv = document.querySelector('.text');
+    let text = "Brendan Eich created JavaScript in 1995 while he was at Netscape Communications Corporation, the creators of the legendary Netscape Navigator web browser. At the time, the Java coding language was rapidly gaining traction and Netscape Communications was working to make it available in Netscape Communicator.";
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        textDiv.innerHTML += text.charAt(i);
+        // let audio = new Audio('geluid.mp3');
+        // audio.play();
+        i++
+        setTimeout(type, Math.floor(Math.random() * 600) + 100);
+      }
+    }
+
+    type()
+  </script>
+
+
+</body>
+</html>
